@@ -61,7 +61,7 @@ public class LojaController {
     public String editarLoja(@PathVariable ("id") int id, @Valid Loja loja, BindingResult br){
         if(br.hasErrors()){
             loja.setId(id);
-            return "/produto/editar-produto";
+            return "/views/editar-loja";
         }
 
         repository.save(loja);
